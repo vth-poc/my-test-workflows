@@ -29,10 +29,10 @@ jobs:
       - uses: actions/github-script@v8
         with:
           script: |
-            const body = ${{ github.event.inputs.body }} || `Hi @${{ github.event.inputs.user_login }},\n\n👋 Thanks for opening this issue!`;
+            const body = "${{ github.event.inputs.body }}" || `Hi @${{ github.event.inputs.user_login }},\n\n👋 Thanks for opening this issue!`;
             github.rest.issues.createComment({
-              issue_number: ${{ github.event.inputs.issue_number }},
-              owner: ${{ github.event.inputs.owner }},
-              repo: ${{ github.event.inputs.repo }},
+              issue_number: "${{ github.event.inputs.issue_number }}",
+              owner: "${{ github.event.inputs.owner }}",
+              repo: "${{ github.event.inputs.repo }}",
               body: body
             })
