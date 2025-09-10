@@ -1,3 +1,6 @@
+name: Comment on New Issue
+run-name: Comment on Issue #${{ github.event.issue.number }}
+
 on:
   issues:
     types: [opened]
