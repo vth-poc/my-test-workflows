@@ -16,5 +16,5 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: `Hi @${context.payload.issue.user.login},\n\n👋 Thanks for reporting!`
+              body: `Hi ${context.payload.issue.user.login},\n\n👋 Thanks for reporting!`
             })
