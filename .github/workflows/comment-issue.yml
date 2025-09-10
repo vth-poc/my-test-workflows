@@ -1,5 +1,5 @@
 name: Comment on New Issue
-run-name: Comment on Issue #${{ github.event.issue.number }}
+run-name: "New Issue #${{ github.event.issue.number }} Created By ${{ github.event.issue.user.login }}"
 
 on:
   issues:
